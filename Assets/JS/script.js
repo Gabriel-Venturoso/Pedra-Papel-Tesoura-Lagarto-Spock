@@ -59,7 +59,9 @@ const showResult = (userWon) => {
     let winnerMessage = document.querySelector(".winner > p");
     let winnerDiv = document.querySelector(".winner");
     winnerDiv.classList.remove("hide");
-    if(userWon){
+    if(userWon == "draw"){
+        winnerMessage.textContent = "Empate";
+    }else if(userWon){
         let pontuation = document.querySelector("#pontuation1");
         pontuation.textContent ++;
         winnerMessage.textContent = "Você ganhou"; 
